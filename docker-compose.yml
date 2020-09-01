@@ -1,0 +1,27 @@
+version: '3'
+services:
+  nodeops:
+    build: ./app
+    container_name: node-app
+    hostname: 'node-app'
+    networks:
+    - skaffold.net
+    volumes:
+    - ./app/src:/app/src
+    ports:
+    - 3000:3000
+    depends_on:
+    - mongodb
+  mongodb:
+    build: ./mongodb
+    container_name: mongo-db
+    hostname: 'mongodb-db'
+    volumes:
+    - ./data/db:/data/db
+    networks:
+    - skaffold.net
+    ports:
+    - "27017:27017"
+networks:
+  skaffold.net:
+    driver: bridge

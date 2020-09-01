@@ -1,4 +1,4 @@
-# Kubernetes Skaffold
+# Developing using local k8s cluster
 
 # [Installation](https://skaffold.dev/docs/install/)
 LINUX/MACOS

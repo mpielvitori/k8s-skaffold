@@ -14,8 +14,8 @@ services:
     - mongodb
   mongodb:
     build: ./mongodb
-    container_name: mongo-db
-    hostname: 'mongodb-db'
+    container_name: mongodb
+    hostname: mongodb
     volumes:
     - ./data/db:/data/db
     networks:

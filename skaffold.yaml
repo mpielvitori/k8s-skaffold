@@ -1,0 +1,14 @@
+apiVersion: skaffold/v2beta6
+kind: Config
+metadata:
+  name: k-s-skaffold
+build:
+  artifacts:
+  - image: mongodb
+    context: app
+  - image: nodeops
+    context: mongodb
+deploy:
+  kubectl:
+    manifests:
+    - .k8s/*.yaml

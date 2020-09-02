@@ -4,9 +4,9 @@ metadata:
   name: k-s-skaffold
 build:
   artifacts:
-  - image: mongodb
-    context: app
   - image: nodeops
+    context: app
+  - image: mongodb
     context: mongodb
 deploy:
   kubectl:

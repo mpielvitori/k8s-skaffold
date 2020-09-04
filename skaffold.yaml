@@ -5,9 +5,13 @@ metadata:
 build:
   artifacts:
   - image: nodeops
+    docker:
+      dockerfile: Dockerfile
     context: app
   - image: mongodb
     context: mongodb
+    docker:
+      dockerfile: Dockerfile
 deploy:
   kubectl:
     manifests:

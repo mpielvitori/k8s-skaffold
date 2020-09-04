@@ -23,7 +23,7 @@ spec:
         - containerPort: 3000
         resources: {}
         volumeMounts:
-        - mountPath: /app/src
+        - mountPath: /src
           name: nodeops-claim0
       hostname: node-app
       restartPolicy: Always

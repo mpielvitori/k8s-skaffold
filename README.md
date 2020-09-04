@@ -31,6 +31,9 @@ sudo mv ./kompose /usr/local/bin/kompose
 brew install kompose
 ```
 
+## [Using K8s for docker-desktop](https://www.docker.com/products/kubernetes)
+The easy way
+
 ## Using MiniKube
 #### [Hyperkit](https://minikube.sigs.k8s.io/docs/drivers/hyperkit/)
 ```
@@ -56,7 +59,7 @@ skaffold init --compose-file docker-compose.yml
 
 ## Run as dev(hot reload)
 ```
-skaffold init --compose-file docker-compose.yml
+skaffold dev
 ```
 
 ## K8s Skaffold alternatives

@@ -5,9 +5,8 @@
   "type": "module",
   "scripts": {
     "lint": "eslint ./",
-    "test": "jest --config ./jest.config.js ./src",
-    "test-exp": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
-    "test-coverage": "jest --config ./jest.config.js --coverage",
+    "test": "NODE_OPTIONS='--experimental-vm-modules' jest",
+    "test-coverage": "NODE_OPTIONS='--experimental-vm-modules' jest --coverage",
     "start": "node ./src/index.js start",
     "start-dev": "nodemon ./src/index.js"
   },

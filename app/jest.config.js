@@ -6,5 +6,5 @@ export default {
     '/tests/',
   ],
   verbose: true,
-  testEnvironment: 'node',
+  testEnvironment: 'jest-environment-node',
 };

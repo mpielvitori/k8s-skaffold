@@ -1,17 +1,16 @@
 /* eslint-disable import/extensions */
-/* eslint-disable no-unused-vars */
 import Product from '../models/product.js';
 
-const getProducts = async (req, res) => {
+export async function getProducts(req, res) {
   console.info('Get products');
   const products = await Product.find({}, {
     _id: 1,
     name: 1,
   });
   res.send(products);
-};
+}
 
-const createProduct = async (req, res) => {
+export async function createProduct(req, res) {
   console.info('Create new product');
   const product = new Product(req.body);
   await product.save();
@@ -20,9 +19,9 @@ const createProduct = async (req, res) => {
     // eslint-disable-next-line no-underscore-dangle
     id: product._id,
   });
-};
+}
 
-export {
-  getProducts,
-  createProduct,
-};
+export async function testMethod(req, res) {
+  console.info('Test method');
+  res.send('SUCCESS');
+}

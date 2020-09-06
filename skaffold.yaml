@@ -3,6 +3,10 @@ kind: Config
 metadata:
   name: k-s-skaffold
 build:
+  local: {}
+  # tagPolicy:
+  #   envTemplate:
+  #     template: "{{.VERSION}}"
   artifacts:
   - image: nodeops
     docker:
@@ -16,3 +20,24 @@ deploy:
   kubectl:
     manifests:
     - .k8s/*.yaml
+  # kubeContext: minikube
+profiles:
+  - name: docker-k8s
+    deploy:
+      kubeContext: docker-desktop
+  - name: minikube
+    activation:
+      - kubeContext: minikube
+  # - name: profile1
+  #   activation:
+  #     - env: MAGIC_VAR=42
+  # - name: profile2
+  #   activation:
+  #     - env: MAGIC_VAR=1337
+  #     - kubeContext: miniKube
+  #       command: dev
+  # - name: dev
+  #   patches:
+  #     - op: replace
+  #       path: /build/artifacts/0/docker/dockerfile
+  #       value: Dockerfile.dev

@@ -59,7 +59,7 @@ skaffold init --compose-file docker-compose.yml
 
 ## Run as dev(hot reload)
 ```
-skaffold dev
+skaffold dev -p minikube
 ```
 
 ## K8s Skaffold alternatives

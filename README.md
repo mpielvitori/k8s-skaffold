@@ -51,15 +51,19 @@ minikube start --driver=hyperkit
 ```
 minikube status
 ```
+#### Dashboard or [Lens](https://k8slens.dev/)
+```
+minikube dashboard
+```
 
-## Skaffolding k8s config
+## Skaffolding k8s config just the first time
 ```
 skaffold init --compose-file docker-compose.yml
 ```
 
-## Run as dev(hot reload)
+## Run on dev(hot reload)
 ```
-skaffold dev -p minikube
+skaffold dev --port-forward -p minikube
 ```
 
 ## K8s Skaffold alternatives

@@ -51,7 +51,7 @@ minikube start --driver=hyperkit
 ```
 minikube status
 ```
-#### Dashboard or use [Lens](https://k8slens.dev/)!!!
+#### Dashboard use [Lens](https://k8slens.dev/) or run the following command
 ```
 minikube dashboard
 ```

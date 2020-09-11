@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-underscore-dangle */
 /* eslint-disable import/extensions */
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { jest } from '@jest/globals';
@@ -14,7 +12,7 @@ describe('Product test', () => {
     mongoServer = new MongoDBMemory.MongoMemoryServer();
     const mongoUri = await mongoServer.getUri();
     await mongoose.connect(mongoUri, (err) => {
-      if (err) console.error(err);
+      if (err) console.error('Problem connecting DB', err);
     });
   });
 

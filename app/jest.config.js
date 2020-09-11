@@ -7,5 +7,4 @@ export default {
   ],
   verbose: true,
   testEnvironment: 'node',
-  preset: '@shelf/jest-mongodb',
 };

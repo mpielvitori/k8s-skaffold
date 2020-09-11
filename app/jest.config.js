@@ -6,5 +6,6 @@ export default {
     '/tests/',
   ],
   verbose: true,
-  testEnvironment: 'jest-environment-node',
+  testEnvironment: 'node',
+  preset: '@shelf/jest-mongodb',
 };

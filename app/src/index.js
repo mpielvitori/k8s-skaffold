@@ -8,15 +8,15 @@ import product from './routes/product.js';
 const app = express();
 
 // Set up mongoose connection
-console.log('DB!!! ', config.dbUri);
+console.info('DB: ', config.dbUri);
 mongoose.connect(
   config.dbUri,
   {
     useUnifiedTopology: true,
     useNewUrlParser: true,
   },
-).then(() => console.log('MongoDB Connected'))
-  .catch((err) => console.log('MongoDB connection error ', err));
+).then(() => console.info('MongoDB Connected'))
+  .catch((err) => console.error('MongoDB connection error ', err));
 mongoose.Promise = global.Promise;
 
 app.use(bodyParser.json());
@@ -29,7 +29,7 @@ app.use('/product', product);
 const port = 3000;
 
 app.listen(port, () => {
-  console.log(`Server is up and running on port numner ${port}`);
+  console.info(`Server is up and running on port numner ${port}`);
 });
 
 export default app;

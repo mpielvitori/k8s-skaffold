@@ -1,4 +1,4 @@
-app/node_modules/**
-app/tests/coverage/**
-app/package-lock.json
+initproject-nodejs-mongodb/app/node_modules/**
+initproject-nodejs-mongodb/app/tests/coverage/**
+initproject-nodejs-mongodb/app/package-lock.json
 data/**

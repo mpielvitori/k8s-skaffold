@@ -11,9 +11,9 @@ build:
   - image: nodeops
     docker:
       dockerfile: Dockerfile
-    context: app
+    context: initproject-nodejs-mongodb/app
   - image: mongodb
-    context: mongodb
+    context: initproject-nodejs-mongodb/mongodb
     docker:
       dockerfile: Dockerfile
 deploy:

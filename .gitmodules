@@ -1,0 +1,3 @@
+[submodule "initproject-nodejs-mongodb"]
+	path = initproject-nodejs-mongodb
+	url = https://github.com/mpielvitori/initproject-nodejs-mongodb.git

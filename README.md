@@ -31,10 +31,10 @@ sudo mv ./kompose /usr/local/bin/kompose
 brew install kompose
 ```
 
-## [Using K8s for docker-desktop](https://www.docker.com/products/kubernetes)
+## [Install K8s for docker-desktop](https://www.docker.com/products/kubernetes)
 The easy way, just enable Kubernetes on your docker-desktop
 
-## Using MiniKube
+## Install MiniKube
 #### [Hyperkit](https://minikube.sigs.k8s.io/docs/drivers/hyperkit/)
 ```
 brew install hyperkit
@@ -43,27 +43,27 @@ brew install hyperkit
 ```
 brew install minikube
 ```
-#### Start MiniKube
-```
-minikube start --driver=hyperkit
-```
-#### Check status
-```
-minikube status
-```
-#### Dashboard use [Lens](https://k8slens.dev/) or run the following command
-```
-minikube dashboard
-```
 
 ## Skaffolding k8s config(just the first time)
 ```
 skaffold init --compose-file docker-compose.yml
 ```
 
-## Run on dev(hot reload)
+## Usage
+
+### Start MiniKube
+```
+minikube start --driver=hyperkit
+```
+
+### Run project with hot reload
 ```
 skaffold dev --port-forward -p minikube
+```
+
+### For monitoring use [Lens](https://k8slens.dev/) or run the following command
+```
+minikube dashboard
 ```
 
 ## K8s Skaffold alternatives
